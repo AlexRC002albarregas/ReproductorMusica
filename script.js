@@ -48,7 +48,7 @@ const music_list = [
     {
         img : 'images/rise.jpg',
         name : 'RISE',
-        artist : 'The Glitch Mob, Mako y The Word Alive',
+        artist : 'Glitch Mob, Mako, Word Alive',
         music : 'music/rise.mp3'
     },
     {
@@ -90,6 +90,7 @@ const music_list = [
 ];
 
 loadTrack(track_index);
+
 
 function loadTrack(track_index){
     clearInterval(updateTimer);
@@ -136,14 +137,12 @@ function playTrack(){
     curr_track.play();
     isPlaying = true;
     track_art.classList.add('rotate');
-    wave.classList.add('loader');
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
 }
 function pauseTrack(){
     curr_track.pause();
     isPlaying = false;
     track_art.classList.remove('rotate');
-    wave.classList.remove('loader');
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
 function nextTrack(){
@@ -194,3 +193,29 @@ function setUpdate(){
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
     }
 }
+
+function displayPlaylist() {
+    const playlistContainer = document.querySelector('.playlist');
+    music_list.forEach((song, index) => {
+        const playlistItem = document.createElement('div');
+        playlistItem.classList.add('playlist-item');
+        playlistItem.onclick = () => {
+            loadTrack(index);
+            playTrack();
+        };
+
+        const playlistItemImage = document.createElement('img');
+        playlistItemImage.src = song.img;
+
+        const playlistItemDetails = document.createElement('div');
+        playlistItemDetails.classList.add('playlist-item-details');
+        playlistItemDetails.textContent = `${song.name} - ${song.artist}`;
+
+        playlistItem.appendChild(playlistItemImage);
+        playlistItem.appendChild(playlistItemDetails);
+
+        playlistContainer.appendChild(playlistItem);
+    });
+}
+
+displayPlaylist();
