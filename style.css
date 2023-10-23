@@ -73,6 +73,12 @@ body {
   color: black;
 }
 
+.random-track i.active,
+.repeat-track i.active {
+    color: white;
+}
+
+
 .repeat-track,
 .random-track,
 .playpause-track,
@@ -184,7 +190,7 @@ p {
 
 .playlist-container {
   position: fixed;
-  left: 10px;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
   background-color: #4286f4;
