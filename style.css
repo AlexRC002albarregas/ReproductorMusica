@@ -45,7 +45,7 @@ body {
   border: 2px solid #FFFAFA;
   background-size: cover;
   background-position: center;
-  
+
 }
 
 .now-playing {
@@ -75,7 +75,7 @@ body {
 
 .random-track i.active,
 .repeat-track i.active {
-    color: white;
+  color: white;
 }
 
 
@@ -174,18 +174,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@keyframes animate {
-  50% {
-    height: 20%;
-    background: #4286f4;
-  }
-
-  100% {
-    background: #4286f4;
-    height: 100%;
-  }
 }
 
 .playlist-container {
