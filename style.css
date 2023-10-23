@@ -45,13 +45,7 @@ body {
   border: 2px solid #FFFAFA;
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
-  -moz-box-shadow: 0px 6px 5px black;
-  -webkit-box-shadow: 0px 6px 5px black;
-  box-shadow: 0px 6px 5px black;
-  -moz-border-radius: 190px;
-  -webkit-border-radius: 190px;
-  border-radius: 190px;
+  
 }
 
 .now-playing {
@@ -167,15 +161,7 @@ p {
   animation: rotation 8s infinite linear;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(359deg);
-  }
-}
 
 .loader {
   height: 70px;
