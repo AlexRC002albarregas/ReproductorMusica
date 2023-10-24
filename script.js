@@ -82,11 +82,18 @@ const music_list = [{
         music: 'music/gods.mp3'
     },
     {
+        img: 'images/paranoia.jpg',
+        name: 'HEARTSTEEL - PARANOIA',
+        artist: 'BAEKHYUN, tobi lou, ØZI, Cal Scruby',
+        music: 'music/paranoia.mp3'
+    },
+    {
         img: 'images/nggyu.jpg',
         name: 'Never Gonna Give You Up',
         artist: 'Rick Astley',
         music: 'music/nggyu.mp3'
     },
+    
 ];
 
 loadTrack(track_index);
